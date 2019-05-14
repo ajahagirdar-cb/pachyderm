@@ -1460,6 +1460,8 @@ nextSubvBranch:
 			return err
 		}
 	}
+	// associate new commits above with any extended traces that are running
+	attachNewCommitsToAnyExtendedTrace(d.etcdClient, d.prefix, stm)
 	return nil
 }
 
